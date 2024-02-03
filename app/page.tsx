@@ -1,15 +1,10 @@
-import Header from './components/Header';
-import { Metadata } from 'next';
+import BaseLayout from '@layouts/BaseLayout';
+import HomeContainer from '@containers/Home';
 
-export const metadata: Metadata = {
-  title: 'NFT MARKETPLACE',
-  description: 'NFT MARKETPLACE',
-};
+const HomePage = () => (
+  <BaseLayout>
+    <HomeContainer />
+  </BaseLayout>
+);
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Header />
-    </main>
-  );
-}
+export default HomePage;

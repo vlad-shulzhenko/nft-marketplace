@@ -1,15 +1,16 @@
 import { FC } from 'react';
 import { DirectListingV3 } from '@thirdweb-dev/react';
 
-import NftItem from './NftItem';
+import NftItem from './Item';
 
 type NftCollectionProps = {
+  title: string;
   nfts: Array<DirectListingV3>;
 };
 
-const NftCollection: FC<NftCollectionProps> = ({ nfts }) => (
+const NftCollection: FC<NftCollectionProps> = ({ title, nfts }) => (
   <div className="flex flex-col gap-6">
-    <h1 className="text-4xl text-secondary font-bold">CopyBAYC Collection</h1>
+    <h1 className="text-4xl text-secondary font-bold">{title}</h1>
     <div className="flex justify-center flex-wrap gap-8">
       {nfts.map((nft) => (
         <NftItem

@@ -1,7 +1,7 @@
 'use client';
 import { FC, ReactNode } from 'react';
 
-import { Header } from '@components';
+import { Footer, Header } from '@components';
 
 type BaseLayoutProps = {
   children: ReactNode;
@@ -13,6 +13,7 @@ const BaseLayout: FC<BaseLayoutProps> = ({ children }): JSX.Element => (
       <div className="flex flex-col gap-10">
         <Header />
         {children}
+        <Footer />
       </div>
     </div>
   </main>
